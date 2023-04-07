@@ -91,7 +91,7 @@ def infer(video_in):
         print("frame " + i + "/" + str(n_frame) + ": done;")
 
     
-    final_vid = create_video(result_frames, fps, "canny")
+    final_vid = create_video(result_frames, fps, "openpose")
 
     files = [final_vid]
 
