@@ -87,7 +87,7 @@ def infer(video_in):
     
     for i in frames_list[0:int(n_frame)]:
         openpose_frame = get_openpose_filter(i)
-        result_frames.append(canny_frame)
+        result_frames.append(openpose_frame)
         print("frame " + i + "/" + str(n_frame) + ": done;")
 
     
