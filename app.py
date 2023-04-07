@@ -46,7 +46,7 @@ def get_frames(video_in):
     return frames, fps
 
 def get_canny_filter(i):
-    #image = Image.open(i)
+    image = Image.open(i)
     
     #image = np.array(image)
 
