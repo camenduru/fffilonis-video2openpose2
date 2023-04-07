@@ -45,15 +45,15 @@ def get_frames(video_in):
     
     return frames, fps
 
-def get_canny_filter(i):
+def get_openpose_filter(i):
     image = Image.open(i)
     
     #image = np.array(image)
 
     image = openpose(image)
     #image = Image.fromarray(image)
-    image.save("canny_frame_" + str(i) + ".jpeg")
-    return "canny_frame_" + str(i) + ".jpeg"
+    image.save("openpose_frame_" + str(i) + ".jpeg")
+    return "openpose_frame_" + str(i) + ".jpeg"
 
 def create_video(frames, fps, type):
     print("building video result")
@@ -86,7 +86,7 @@ def infer(video_in):
     print("set stop frames to: " + str(n_frame))
     
     for i in frames_list[0:int(n_frame)]:
-        canny_frame = get_canny_filter(i)
+        openpose_frame = get_openpose_filter(i)
         result_frames.append(canny_frame)
         print("frame " + i + "/" + str(n_frame) + ": done;")
 
@@ -109,7 +109,7 @@ title="""
         "
         >
         <h1 style="font-weight: 600; margin-bottom: 7px;">
-            Video to Canny Edge
+            Video to OpenPose
         </h1>
         </div>
        
