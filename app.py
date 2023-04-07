@@ -46,12 +46,12 @@ def get_frames(video_in):
     return frames, fps
 
 def get_canny_filter(i):
-    image = Image.open(i)
+    #image = Image.open(i)
     
-    image = np.array(image)
+    #image = np.array(image)
 
     image = openpose(image)
-    image = Image.fromarray(image)
+    #image = Image.fromarray(image)
     image.save("canny_frame_" + str(i) + ".jpeg")
     return "canny_frame_" + str(i) + ".jpeg"
 
