@@ -1,0 +1,5 @@
+diffusers==0.14.0
+opencv-python
+ffmpeg-python
+moviepy
+controlnet_aux
